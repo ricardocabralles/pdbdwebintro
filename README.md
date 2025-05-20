@@ -1,1 +1,4 @@
 # pdbdwebintro
+cidade onde o curso esta sendo realizado: PROJETO DESENVOLVE - BOM DESPACHO
+NOME DA DISCIPLINA: INTRODUÇÃO À PROGRAMAÇÃO WEB
+NUMERO DE MATRICULA: PDBD216
