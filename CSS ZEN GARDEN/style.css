@@ -1,28 +1,62 @@
-/* O foco dessa atividade será reposicionar os elementos da nossa página!
+/* Na atividade deste capítulo iremos aprimorar o layout de nossa página utilizando o flexbox.
 
-1. Defina o elemento .page-wrapper como referência para posicionamento.
+1. Aplique o flexbox no rodapé da seção principal, e posicione os links de
+ forma que fiquem centralizados e com espaçamento entre eles.
 
-2. Faça com que o painel .explanation ocupe 60% da largura disponível, mas crie um
+- Defina um mesmo tamanho para os links.
+- Não se esqueça de tratar o caso de quebra de linha.
 
-espaçamento a direita de 35% utilizando margin .
+2. Configure um layout de flexbox para a seção de benefícios da seguinte forma:
 
-- Adicione uma borda à direita do painel de 1px, com a cor #1f295c
+- O texto deve ficar à esquerda, e o título à direita.
 
-- Adicione um espaçamento interno de 2% no lado direito do painel.
+- O título deve ficar centralizado verticalmente.
 
-3. Agora mova o menu de designs para a direita da página, ocupando o espaço em branco
+- O texto deve ocupar aproximadamente 70% da largura, e o título 30%.
 
-deixado pelo elemento .explanation .
+3. Configure um layout de flexbox para a seção de participação da seguinte forma:
 
-- Faça-o iniciar na parte superior da página, após a parte de introdução (por exemplo,
+- Cada item deve ocupar 50% do espaço disponível.
 
-aplicando top: 560px ).
+- O título deverá ficar centralizado verticalmente.
 
-- Faça-o iniciar após o elemento .explanation (por exemplo, aplicando left: 62% ).
+4. Inclua uma linha no topo e embaixo das seções de benefícios e participação, utilizando a
 
-- Adicione um espaçamento interno horizontal de 2% no menu para centralizá-lo.
+propriedade border-bottom e border-top respectivamente.
+
+- Remova a ocorrência de borda duplicada entre as duas seções
 
 Envie nessa atividade com o link do projeto no GitHub.*/
+.benefits {
+
+    display: flex;
+    border-top: #1f295c solid 1px;
+    border-bottom: #1f295c solid 1px;
+}
+.benefits h3 {
+    order: 2;
+    align-self: center;
+    flex-basis: 30%;
+}
+.benefits p {
+    flex-basis: 70%;
+}
+    
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #1f295c solid 1px;
+}
+.participation h3, .participation p {
+    flex-basis: 50%;
+}
+.participation h3 {
+    align-self: center;
+}
+.supporting footer {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .page-wrapper{
     position: relative;
@@ -37,7 +71,7 @@ padding-right: 2%;
 
 #design-selection {
     position: absolute;
-    top:560px;
+    top: 520px;px;
     left: 62%;
     padding-left: 1%;
     padding-right: 1%;
@@ -51,7 +85,7 @@ padding-right: 2%;
 
 .main footer a{
 
-    border: solid 2px #2318F0;
+    border: solid 2px #1f295c;
     padding: 0.5em;
     display: inline-block;
 }
@@ -77,7 +111,7 @@ margin: auto;
 }
 
 #zen-intro header{
-     background-color: #2318F0;
+     background-color: #130f69;
     color: #FAF4A1 ;
 
 }
@@ -92,7 +126,7 @@ margin: auto;
 }
 html {
     background-color: #FAF4A1;
-    color: #2318F0;
+    color:#1f295c ;
     color-scheme: #1C1C1D ;
     border-color: #1C1C1D;
     font-size: 18 px;
