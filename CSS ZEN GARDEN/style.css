@@ -1,32 +1,49 @@
-/* Na atividade deste capítulo iremos aprimorar o layout de nossa página utilizando o flexbox.
+/* 1. Customize a aparência dos links da seguinte forma:
 
-1. Aplique o flexbox no rodapé da seção principal, e posicione os links de
- forma que fiquem centralizados e com espaçamento entre eles.
+Por padrão, devem ter a cor de destaque e estarem em negrito.
 
-- Defina um mesmo tamanho para os links.
-- Não se esqueça de tratar o caso de quebra de linha.
+Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. Os links visitados não devem ficar mais em negrito.
 
-2. Configure um layout de flexbox para a seção de benefícios da seguinte forma:
+2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá
+ customizá-lo para que:
 
-- O texto deve ficar à esquerda, e o título à direita.
+Tenha tamanho de fonte 3 vezes maior que o padrão.
 
-- O título deve ficar centralizado verticalmente.
+Seja de uma fonte diferente da escolhida para o site.
 
-- O texto deve ocupar aproximadamente 70% da largura, e o título 30%.
+Fique flutuando a esquerda.
 
-3. Configure um layout de flexbox para a seção de participação da seguinte forma:
+OBS: você precisará aplicar mais de um pseudo-seletor para realizar essa estilização. Fique atento!
 
-- Cada item deve ocupar 50% do espaço disponível.
+3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda superior no topo de todos os itens de menu.
 
-- O título deverá ficar centralizado verticalmente.
-
-4. Inclua uma linha no topo e embaixo das seções de benefícios e participação, utilizando a
-
-propriedade border-bottom e border-top respectivamente.
-
-- Remova a ocorrência de borda duplicada entre as duas seções
+Aplique uma borda inferior apenas no último item da lista
 
 Envie nessa atividade com o link do projeto no GitHub.*/
+
+a {
+    color: #f0122f 
+}
+a:hover{
+    color: palevioletred;
+}
+
+.main p:first-of-type::first-letter{
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+
+.design-selection li {
+     border-top: #1f295c solid 1px; 
+     padding-top: 5px;
+
+}
+
+.design-selection li:last-of-type {
+border-bottom:#1f295c solid 1px;
+padding-bottom: 5px;
+}
 .benefits {
 
     display: flex;
@@ -71,7 +88,7 @@ padding-right: 2%;
 
 #design-selection {
     position: absolute;
-    top: 520px;px;
+    top: 505px;px;
     left: 62%;
     padding-left: 1%;
     padding-right: 1%;
