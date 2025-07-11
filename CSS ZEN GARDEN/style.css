@@ -1,25 +1,75 @@
-/* 1. Customize a aparência dos links da seguinte forma:
+/* Vamos deixar a nossa página do CSS Zen Garden responsiva a dispositivos móveis! 
+Para isso iremos implementar as seguintes modificações.
 
-Por padrão, devem ter a cor de destaque e estarem em negrito.
+1. Crie uma media query para telas inferiores a 768 pixels; 
+nós a utilizaremos como layout mobile.
 
-Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. Os links visitados não devem ficar mais em negrito.
+2. Realize as seguintes mudanças para p layout mobile
 
-2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá
- customizá-lo para que:
+Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
 
-Tenha tamanho de fonte 3 vezes maior que o padrão.
+Remova a borda lateral ao lado da div
 
-Seja de uma fonte diferente da escolhida para o site.
+mude a orientação do Flexbox presente no elemento   para vertical, 
+e organize os elementos de forma empilhada
 
-Fique flutuando a esquerda.
+Remova a altura fixa presente no cabeçalho da página
 
-OBS: você precisará aplicar mais de um pseudo-seletor para realizar essa estilização. Fique atento!
+Remova também o espaçamento inicial dado a cada um dos parágrafos
 
-3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda superior no topo de todos os itens de menu.
+Vamos Deixar nossa página mais adequada a mídia de impressão também!
 
-Aplique uma borda inferior apenas no último item da lista
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela
 
-Envie nessa atividade com o link do projeto no GitHub.*/
+2. Adicione as seguintes modificações a essa media query
+
+Altere o estilo da fonte para uma serifada, como times .
+
+Inverta as cores do banner para que o fundo fique claro (assim como o restante da página)
+
+Envie nessa atividade o arquivo zen_garden.zip */
+
+@media screen and (max-width: 768px){
+#design-selection{
+
+    position: static;
+    width: 100%;
+}
+
+#zen-explanation {
+    border-right: none;
+    width: 100%;
+}
+#zen-intro {
+    height: auto;
+}
+.participation {
+    flex-direction: column;
+}
+
+p {
+    text-indent: 0;
+}
+
+}
+
+@media print {
+    html{
+font-family: 'times new roman', times, serif;
+}
+
+#zen-intro header {
+background-color: #FAF4A1;
+color: #130f69;
+}
+#design-selection{
+
+    position: static;
+    width: 100%;
+}
+}
+    
+
 
 a {
     color: #f0122f 
@@ -86,9 +136,9 @@ padding-right: 2%;
 
 }
 
-#design-selection {
+.design-selection {
     position: absolute;
-    top: 505px;px;
+    top: 505px;
     left: 62%;
     padding-left: 1%;
     padding-right: 1%;
@@ -158,4 +208,4 @@ h2{ font-size: 1.4rem;}
 h3 {font-size: 1.2rem;}
 .summary {text-align: center;}
 .main p {line-height: 1.5;}
-abbr{font-variant: small-caps;}
+abbr {font-variant:small-caps;}
