@@ -1,0 +1,134 @@
+
+/* 
+
+ Deverão ser implementados, pelo menos, duas propostas de layout de página distintas:
+ uma para mobile e outra para desktop.
+ O menu deverá ficar horizontal no desktop, mas vertical no mobile
+ Os registros de 
+Educação e 
+Experiência deverão ficar alinhados verticalmente
+
+Os dados da 
+Apresentação (Cabeçalho) também deverão ficar posicionados
+ verticalmente, porém com o nome exibido primeiro, seguido da foto e então o texto de
+ apresentação. Os dados de contato deverão ficar no final desta seção.*/
+/* Layout para desktop */
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Layout para mobile */
+@media (max-width: 767px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    right: 50%;
+  }
+  body {
+  padding-top: 140px;}
+}
+
+#educacao {
+    border-top: black solid 1px;
+}
+#certificacoes {
+    border-top: black solid 1px;
+}
+#experiencia {
+    border-top: black solid 1px;
+}
+#habilidades {
+    border-top: black solid 1px;
+}
+ 
+#cabecalho, #educacao, #certificacoes, #experiencia, #habilidades, #midias {
+    margin-top: 100px;
+
+}
+
+h2 {color:#3232a0;
+    font-size: 30px;
+}
+
+
+ html{
+    color: black;
+    background-color: rgb(168, 160, 160);
+     color-scheme: #3232a0 ;
+    border-color: #3232a0;
+    font-size: 18 px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1,h2,h3 {font-family: 'Times New Roman', Times, serif;}
+
+h1{
+    font-size: 36px;
+}
+#cabecalho{
+    background-color:#3232a0;
+    color: white;
+}
+#resumo {background-color: rgb(168, 160, 160); color:black}
+
+aside{
+img{
+  width: 150px;      
+  height: 200px;}
+    display: flex;
+    
+    top: 50px;
+    left: 80%;
+   
+}
+
+#resumo {
+    width: 70%;
+    text-align: justify;
+
+    
+    
+}
+
+a {color:rgb(111, 111, 231)}
+a:hover {
+    color: yellowgreen}
+
+    nav {
+        color:rgb(168, 160, 160);
+        background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav ul {
+  list-style: none;            /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+  display: flex;               /* Exibe os <li> em linha */
+  justify-content: center;    /* Centraliza os itens na barra */
+  gap: 20px;                   /* Espaço entre os links */
+}
+
+nav li a {
+  text-decoration: none;       /* Remove o sublinhado dos links */
+  color: white;                /* Cor do texto */
+  font-weight: bold;
+  padding: 10px;
+}
+
+
+        
+    
+
+    footer {
+
+    background-color: black;
+    color:white
+    }
+
